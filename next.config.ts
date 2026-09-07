@@ -19,7 +19,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  output: 'standalone',
+  // Disable standalone mode when building for Netlify or static export so Netlify's Next.js plugin can handle SSR & static routes properly
+  output: process.env.STATIC_EXPORT === 'true' ? 'export' : (process.env.NETLIFY || process.env.NETLIFY_LOCAL ? undefined : 'standalone'),
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.
