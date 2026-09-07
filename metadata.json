@@ -1,0 +1,6 @@
+{
+  "name": "Goldak Welding Thermal Simulator",
+  "description": "Educational mechanical engineering simulation tool for studying transient heat transfer during welding using the Goldak Double-Ellipsoid Heat Source Model.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
